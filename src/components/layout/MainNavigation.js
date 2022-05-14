@@ -11,7 +11,7 @@ const MainNavigation = () => {
           <li>
             <NavLink
               className={(nav) => (nav.isActive ? classes.active : "")}
-              to="/all-quotes"
+              to="/quotes"
             >
               All Quotes
             </NavLink>
@@ -19,7 +19,7 @@ const MainNavigation = () => {
           <li>
             <NavLink
               className={(navData) => (navData.isActive ? classes.active : "")}
-              to="/add-quote"
+              to="/new-quote"
             >
               Add Quote
             </NavLink>

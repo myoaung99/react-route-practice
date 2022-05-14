@@ -1,13 +1,11 @@
 import React from "react";
-import Layout from "../components/layout/Layout";
+import QuoteForm from "./../components/quotes/QuoteForm";
 
 const AddQuote = () => {
-  return (
-    <>
-      <Layout />
-      <h1>This is Add quotes screen.</h1>
-    </>
-  );
+  const addQuoteHandler = (quoteData) => {
+    console.log(quoteData);
+  };
+  return <QuoteForm onAddQuote={addQuoteHandler} />;
 };
 
 export default AddQuote;
