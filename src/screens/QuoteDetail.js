@@ -1,5 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import Comments from "./../components/comments/Comments";
+import { useParams, Routes, Route, Link } from "react-router-dom";
 
 const QuoteDetail = () => {
   const params = useParams();
@@ -7,6 +8,12 @@ const QuoteDetail = () => {
     <>
       <h1>This is Quote detail screen</h1>
       <p>{params.quoteId}</p>
+
+      <Link to="comments">btn</Link>
+
+      <Routes>
+        <Route path="comments" element={<Comments />} />
+      </Routes>
     </>
   );
 };

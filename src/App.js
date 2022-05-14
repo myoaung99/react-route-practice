@@ -10,7 +10,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/quotes" element={<AllQuotes />} />
-      <Route path="/quotes/:quoteId" element={<QuoteDetail />} />
+      <Route path="/quotes/:quoteId/*" element={<QuoteDetail />} />
       <Route path="/new-quote" element={<AddQuote />} />
     </Routes>
   );
