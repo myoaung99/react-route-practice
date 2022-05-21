@@ -28,6 +28,7 @@ function httpReducer(state, action) {
   return state;
 }
 
+// useHttp ကိုခေါ်တဲ့အခါ request function ထည့်ပေးရမယ်
 function useHttp(requestFunction, startWithPending = false) {
   const [httpState, dispatch] = useReducer(httpReducer, {
     status: startWithPending ? "pending" : null,
@@ -39,6 +40,7 @@ function useHttp(requestFunction, startWithPending = false) {
     async function (requestData) {
       dispatch({ type: "SEND" });
       try {
+        // ဒီ sendRequest function ကို return ပြန်ပေးမယ် ခေါ်တဲ့ အခါ request data ထည့်ပေးရမယ်
         const responseData = await requestFunction(requestData);
         dispatch({ type: "SUCCESS", responseData });
       } catch (error) {
