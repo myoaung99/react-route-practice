@@ -7,11 +7,6 @@ import useHttp from "./../components/hooks/use-http";
 import { getSingleQuote } from "./../components/lib/api";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 
-const DUMMY_QUOTES = [
-  { id: "q1", author: "Myo", text: "Learning React is Fun!" },
-  { id: "q2", author: "Myo Myint Aung", text: "Learning React is Great!" },
-];
-
 const ShowCommentBtn = () => {
   return (
     <div className="centered">
