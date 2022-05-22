@@ -8,19 +8,14 @@ import { getAllComments } from "../lib/api";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import CommentsList from "../comments/CommentsList";
 
-const Comments = (props) => {
+const Comments = () => {
   const [isAddingComment, setIsAddingComment] = useState(false);
 
   const params = useParams();
 
   const { quoteId } = params;
 
-  const {
-    sendRequest,
-    error,
-    status,
-    data: loadedComments,
-  } = useHttp(getAllComments);
+  const { sendRequest, status, data: loadedComments } = useHttp(getAllComments);
 
   useEffect(() => {
     sendRequest(quoteId);
